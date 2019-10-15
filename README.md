@@ -1,3 +1,3 @@
 # Hackerrank
-<h2> Solving problems with Python 3.7. Scripting. </h2>
+<h3> Solving problems with Python 3.7. Scripting. </h3>
 <br /> Covering: IMPLEMENTATION, SEARCH, SORT, STRING
