@@ -5,6 +5,7 @@ import random
 import re
 import sys
 
+# this is a counting sort problem 
 def migratoryBirds(arr):
     holder = [0]*6
     for i in arr:
