@@ -1,5 +1,5 @@
 # Hackerrank
-## Python 3.7.x
+Python 3.7.x
 
 ## Content 
 - [ ] IMPLEMENTATION
