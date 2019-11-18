@@ -16,7 +16,7 @@ def funnyString(s):
         r_value = abs(r_array[i] - r_array[i+1])
         if s_value != r_value:
             return 'Not Funny'
-            break
+            
     return 'Funny'
 
 
