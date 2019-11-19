@@ -7,6 +7,8 @@ def solution(A):
         if A[i] >= 0:
             if A[i] != A[i+1] and A[i] != A[i+1] + 1: 
                 smallest = A[i]+1
+                return smallest 
+            # I can check this at the beginning. 
             else:
                 smallest = A[-1]+1
     return smallest
