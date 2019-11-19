@@ -11,7 +11,7 @@ def diagonalDifference(arr):
     return abs(sum1-sum2)
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    fptr = open(os.environ['Users/KKyle'], 'w')
 
     n = int(input().strip())
 
