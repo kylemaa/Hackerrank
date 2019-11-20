@@ -28,6 +28,8 @@ def score(number):
         if digits[i] % 2 == 0:
             score += 3
         # TODO: +N^2 points for a sequence of length N, where each digit is 1 less than the previous digit.
+        if digits[i] == digits[i+1]-1 and i < l:
+            N += 1
 
     # if the entire number is multiple of 3 +4 points.
     if number % 4 == 0:
