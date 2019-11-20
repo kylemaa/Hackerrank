@@ -15,11 +15,12 @@ def score(number):
     score = 0 
     N = 0
     for i in range(l):
+        print(i)
         # if number 7 is found +5 points.
         if digits[i] == 7:
             score += 7
-        # if number is 2 and not at the last number.
-        if digits[i] == 2 and i < l:
+        # if number is 2 and not at the last index.
+        if i < l-1 and digits[i] == 2 :
             # check if the number before it is 2 then +6 points.
             # the OR statement will cover the preceding 2.
             if digits[i+1] == 2 or digits[i-1] == 2: 
@@ -28,9 +29,9 @@ def score(number):
         if digits[i] % 2 == 0:
             score += 3
         # Accumulate N as length, where each digit is 1 less than the previous digit.
-        if digits[i] == digits[i+1]-1 and i < l:
+        if i < l-1 and digits[i] == digits[i+1]-1:
             N += 1
-            # TODO: Need to calculate N if the sequence stops!
+        # TODO: Need to calculate N if the sequence stops!
 
     # if the entire number is multiple of 3 +4 points.
     if number % 4 == 0:
@@ -41,3 +42,5 @@ def score(number):
     return finalscore
 
 
+number = 7777
+print(score(number))
