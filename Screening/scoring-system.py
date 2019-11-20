@@ -18,7 +18,7 @@ def score(number):
         print(i)
         # if number 7 is found +5 points.
         if digits[i] == 7:
-            score += 7
+            score += 5
         # if number is 2 and not at the last index.
         if i < l-1 and digits[i] == 2 :
             # check if the number before it is 2 then +6 points.
@@ -28,14 +28,14 @@ def score(number):
         # if number is even +3 points.
         if digits[i] % 2 == 0:
             score += 3
-        # Accumulate N as length, where each digit is 1 less than the previous digit.
+        # Track N as length, where each digit is 1 less than the previous digit.
         if i < l-1 and digits[i] == digits[i+1]-1:
             N += 1
         # Raise a flag if sequence is starting
             flag = True
-        # Calculate the N to points, reset N and flag
+        # Accumulate the N to points, reset N and flag
         if not flag:
-            N_to_points = N**2
+            N_to_points += N**2
             N = 0
             flag = False
 
