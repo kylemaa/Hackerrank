@@ -10,3 +10,6 @@ Python 3.7.x
 - [ ] CLASSES
 - [ ] PROFICIENCY
 - [ ] SCREENING QUESTIONS
+
+## Current Progress
+![Badges](https://i.imgur.com/jXoXHfe.png)
