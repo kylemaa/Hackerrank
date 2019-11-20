@@ -12,4 +12,4 @@ Python 3.7.x
 - [ ] SCREENING QUESTIONS
 
 ## Current Progress
-![Badges](https://i.imgur.com/jXoXHfe.png)
+<img src="https://i.imgur.com/jXoXHfe.png" width="280">
