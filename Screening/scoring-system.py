@@ -11,4 +11,30 @@
 def score(number):
     # put every single digit into a new array 
     digits = [int(x) for x in str(number)]
-    
+    l = len(digits)
+    score = 0 
+    N = 0
+    for i in range(l):
+        # if number 7 is found +5 points.
+        if digits[i] == 7:
+            score += 7
+        # if number is 2 and not at the last number.
+        if digits[i] == 2 and i < l:
+            # check if the number before it is 2 then +6 points.
+            # the OR statement will cover the preceding 2.
+            if digits[i+1] == 2 or digits[i-1] == 2: 
+                score += 6
+        # if number is even +3 points.
+        if digits[i] % 2 == 0:
+            score += 3
+        # TODO: +N^2 points for a sequence of length N, where each digit is 1 less than the previous digit.
+
+    # if the entire number is multiple of 3 +4 points.
+    if number % 4 == 0:
+        score != 4
+
+    # return the final score after adding it to N^2 points    
+    finalscore = score + N**2
+    return finalscore
+
+
