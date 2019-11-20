@@ -4,13 +4,11 @@ def solution(A):
     A = sorted(A)
     smallest = 0
     for i in range(len(A)-1):
-        if A[i] >= 0:
+        if A[i] > 0:
             if A[i] != A[i+1] and A[i] != A[i+1] + 1: 
                 smallest = A[i]+1
                 return smallest 
             # I can check this at the beginning. 
-            else:
-                smallest = A[-1]+1
     return smallest
 
 if __name__ == "__main__":
