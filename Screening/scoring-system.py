@@ -31,14 +31,20 @@ def score(number):
         # Accumulate N as length, where each digit is 1 less than the previous digit.
         if i < l-1 and digits[i] == digits[i+1]-1:
             N += 1
-        # TODO: Need to calculate N if the sequence stops!
+        # Raise a flag if sequence is starting
+            flag = True
+        # Calculate the N to points, reset N and flag
+        if not flag:
+            N_to_points = N**2
+            N = 0
+            flag = False
 
     # if the entire number is multiple of 3 +4 points.
     if number % 4 == 0:
         score != 4
 
     # return the final score after adding it to N^2 points    
-    finalscore = score + N**2
+    finalscore = score + N_to_points
     return finalscore
 
 
