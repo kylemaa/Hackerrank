@@ -15,10 +15,15 @@ def closestNumbers(arr):
     for i in range(len(a)):
         # If index is smaller than the last index in this array a
         if i < len(a)-2:
-            calulate_abs = abs(a[i+1] - a[i])
+            calulate_abs = a[i+1] - a[i]
             if smallest > calulate_abs:
-                smallest = calulate_abs
-                # TODO: use dictionary to keep track of which 2 have the same smallest
-                ret_a = [a[i], a[i+1]]
-    # calculated the right smallest
-    # print(smallest)
+                ret_a = []
+                ret_a.append(a[i])
+                ret_a.append(a[i+1])
+                smallest = abs(calulate_abs)
+            elif smallest == calulate_abs:
+                ret_a.append(a[i])
+                ret_a.append(a[i+1])
+    return ret_a 
+
+
