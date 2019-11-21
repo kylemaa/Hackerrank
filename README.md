@@ -12,4 +12,4 @@ Python 3.7.x
 - [ ] SCREENING QUESTIONS
 
 ## Current Progress
-<img src="https://i.imgur.com/jXoXHfe.png" width="280">
+<img src="https://i.imgur.com/zTPZRlv.png" width="280">
