@@ -2,6 +2,7 @@
 
 n = int(input())
 names_numbers = [input().split() for _ in range(n)]
+# key is the name and value here is phone number
 phone_book = {k : v for k,v in names_numbers}
 while True:
     try:
