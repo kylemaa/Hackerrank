@@ -10,6 +10,8 @@ Python 3.7.x
 - [ ] CLASSES
 - [ ] PROFICIENCY
 - [ ] SCREENING QUESTIONS
+- [ ] DEBUGGING
+
 
 ## Current Progress
 <img src="https://i.imgur.com/plOjGAX.png" width="280">
