@@ -9,8 +9,8 @@ Python 3.7.x
 - [ ] DYNAMIC PROGRAMMING
 - [ ] CLASSES
 - [ ] PROFICIENCY
-- [ ] SCREENING QUESTIONS
 - [ ] DEBUGGING
+- [ ] LeetCode
 
 
 ## Current Progress
