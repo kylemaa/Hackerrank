@@ -12,9 +12,10 @@ def twoSumHash(arr, target):
         complement = target - v 
         if complement in table:
             return [i, table[complement]]
+        # this def fails input [3,2,4] because it outputs [0,0]
 
     
 target = 5
 arr = [1, 4, 5, 6]
-print ('brute:', twoSumBrute(arr,target))
+#print ('brute:', twoSumBrute(arr,target))
 print ('hash:', twoSumHash(arr,target))
