@@ -8,11 +8,11 @@ def twoSumHash(arr, target):
     #table = {i:v for i, v in enumerate(arr)}
     table = {}
     for i, v in enumerate(arr):
-        table[v] = i
         complement = target - v 
         if complement in table:
             return [i, table[complement]]
-        # this def fails input [3,2,4] because it outputs [0,0]
+        #if complement not in table:
+        table[v] = i
 
     
 target = 5
