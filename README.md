@@ -10,7 +10,7 @@ Python 3.7.x
 - [ ] CLASSES
 - [ ] PROFICIENCY
 - [ ] DEBUGGING
-- [ ] LeetCode
+- [ ] LEETCODE
 
 
 ## Current Progress
