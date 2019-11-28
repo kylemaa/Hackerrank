@@ -4,10 +4,10 @@ Python 3.7.x
 ## Content 
 General Approach  | Areas for improvement
 ----------------- | ----------------- 
-Code              | Cover edge and base cases 
+Code              | Cover edge and base cases.
 Data structures & Algorithms| Analyze the solution's alternatives first before coding. 
-Communication     |
-Speed & Efficiency| Code whichever said is possible 
+Communication     | Make more in depth comments while coding.
+Speed & Efficiency| Code whichever said is possible. 
 
 - [ ] IMPLEMENTATION
 - [ ] SEARCH
