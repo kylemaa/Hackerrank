@@ -15,7 +15,7 @@ def twoSumHash(arr, target):
         table[v] = i
 
     
-target = 5
-arr = [1, 4, 5, 6]
+target = 6
+arr = [3, 3, 5, 6]
 #print ('brute:', twoSumBrute(arr,target))
 print ('hash:', twoSumHash(arr,target))
