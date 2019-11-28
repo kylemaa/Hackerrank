@@ -2,12 +2,12 @@
 Python 3.7.x
 
 ## Content 
-General Approach  | 
------------------ | 
-Code|
-Data structures & Algorithms|
-Communication|
-Speed & Efficiency|
+General Approach  | Areas for improvement
+----------------- | ----------------- 
+Code              | Cover edge and base cases 
+Data structures & Algorithms| Analyze the solution's alternatives first before coding. 
+Communication     |
+Speed & Efficiency| Code whichever said is possible 
 
 - [ ] IMPLEMENTATION
 - [ ] SEARCH
