@@ -19,7 +19,8 @@ class Solution:
       if not helper(node.left, lower, node.val):
         return False 
       return True 
-    # pass the root to the helper function
+    # pass the root to the helper function, 
+    # the lower and upper values are big so helper function can have passing params
     return helper(root, float('-inf'), float('inf'))
 
 
