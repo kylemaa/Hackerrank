@@ -9,7 +9,7 @@ class Solution:
         return self.helper(l1, l2, 0)
     # this function update the carry over and return the next links if next is not null    
     def helper(self, l1, l2, c):
-        val = l1.val + l1.val + c
+        val = l1.val + l2.val + c
         c = val//10
         ret = Node(val % 10)
         if l1.next != None and l2.next != None:
