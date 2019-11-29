@@ -12,7 +12,7 @@ class Solution:
         val = l1.val + l2.val + c
         c = val//10
         ret = Node(val % 10)
-        if l1.next != None and l2.next != None:
+        if l1.next != None or l2.next != None or c != 0:
             if not l1.next:
                 l1.next = Node(0)
             if not l2.next:
