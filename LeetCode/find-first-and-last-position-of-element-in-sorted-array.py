@@ -7,7 +7,7 @@ class Solution:
         first = self.binarySearch(arr, 0, len(arr)-1, target, True)
         last = self.binarySearch(arr, 0, len(arr)-1, target, False)
         return [first, last]
-        
+    # this is a helper function   
     def binarySearch(self, arr,low, high, target, findFirst):
         # findFirst is for whether we're looking for the first index
         if high < low: 
