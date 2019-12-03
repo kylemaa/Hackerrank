@@ -11,7 +11,7 @@ class Solution:
                 occurrence[n] = 1
         for x in occurrence:
             if occurrence[x] == 1:
-                return occurrence[x]
+                return x
 
 
 print(Solution().singleNumber([4, 3, 2, 4, 1, 3, 2]))
