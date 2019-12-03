@@ -26,4 +26,13 @@ def sortNums2(nums):
             end -= 1 
     return nums
 
-print(sortNums2([3, 3, 2, 1, 3, 2, 1, 1]))
+def sortNums3(nums):
+    count = {}
+    for x in nums:
+        try:
+            count[x] += 1
+        except KeyError:
+            count[x] = 1 
+    return ([1]*count[1] + [2]*count[2] + [3]*count[3] )
+     
+print(sortNums3([3, 3, 2, 1, 3, 2, 1, 1]))
