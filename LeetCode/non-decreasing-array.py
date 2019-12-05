@@ -3,22 +3,23 @@ class Solution:
         # egde case
         if len(nums)< 2:
             return False 
-        dips = 0 
-        prev_num = 0
+        dips = None
         for i in range(len(nums)-1):
             if nums[i] > nums[i+1]:
-                dips -= 1 
-                prev_num = nums[i]
-    
-            elif nums[i] < nums[i+1]:
-                dips += 1
-
-            if prev_num > nums[i+1] and dips < 0:
-                return False
-        
-        if dips > -2:
+                if dips is not None:
+                    dips = i
+        # if there's no dip
+        if dips is None:
+            return True
+        if dips == 0: 
+            return True
+        if dips == len(nums) -2:
             return True 
-        else: 
-            False
+        if nums[dips] <= nums[dips + 2] or nums[dips - 1] <= nums[dips + 1]:
+            return True
+        return False
 
+        
+        
+        
 print(Solution().checkPossibility([4,2,6]))
