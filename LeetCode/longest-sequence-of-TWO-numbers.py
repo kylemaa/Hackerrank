@@ -39,5 +39,4 @@ def findLongestSequence(seq):
 print(findLongestSequence([1, 3, 5, 3, 1, 3, 1, 5]))
 print(findLongestSequence([1, 1, 3, 3, 4, 4]))
 
-
-    
+# More practice: https://leetcode.com/problems/longest-substring-without-repeating-characters/
