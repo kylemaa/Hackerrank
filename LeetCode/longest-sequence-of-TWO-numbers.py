@@ -1,3 +1,8 @@
+# In this function we would traverse the array once. AKA: time complexity if O(n).
+# Keep track of the first two numbers,
+# Compare if the iterating value in array is equal to either first two numbers. At the same time keep track of the length varible to return. 
+# Cover some cases where the last seen number is equal to current number, first number is equal to current number, OR handle resetting length varible if current number does not match any of those two.
+
 def findLongestSequence(seq):
     # egde case 
     if len(seq) < 2:
