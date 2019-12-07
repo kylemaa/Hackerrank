@@ -8,11 +8,11 @@ class Solution:
         for edge in prerequisites:
             self.graph[edge[0]].append(edge[1])
             
-        visited = set()
+    visited = set()
 
     # True if there is a cycle, False if not
     def visit(self, vertex):
-      visited.add(vertex)
+      self.visited.add(vertex)
       for neighbour in self.graph[vertex]:
         if neighbour in self.visited or self.visit(neighbour):
           return True
