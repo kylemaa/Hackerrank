@@ -11,7 +11,7 @@ class Solution:
             # heap push method
             heapq.heappush(heap, (v,key))
             if len(heap) > k:
-                # heap pop the ones that most frequent based on the value v (pop the smallest/ min-heap)
+                # heap pop the ones that least frequent based on the value v (pop the smallest/ min-heap)
                 heapq.heappop(heap)      
         res = []
         while len(heap) > 0:
