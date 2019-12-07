@@ -20,6 +20,7 @@ def remove_kth(node, k):
         if not fast_ptr:
             return node.next
         prev = None
+        
         while fast_ptr:
             prev = slow_ptr
             fast_ptr = fast_ptr.next 
