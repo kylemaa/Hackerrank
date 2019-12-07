@@ -11,12 +11,12 @@ class Solution:
             # heap push method
             heapq.heappush(heap, (v,key))
             if len(heap) > k:
-                # heap pop the ones that most frequent based on the value v
+                # heap pop the ones that most frequent based on the value v (pop the smallest/ min-heap)
                 heapq.heappop(heap)      
         res = []
         while len(heap) > k:
             res.append(heapq.heappop(heap)[1])
         return res
 
-print(Solution().topKelements([3,3,1,1,2,5,7,8], 5 ))
+print(Solution().topKelements([3, 3, 1, 1, 2, 2, 5, 7, 8], 3 ))
     
