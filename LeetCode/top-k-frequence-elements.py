@@ -14,9 +14,9 @@ class Solution:
                 # heap pop the ones that most frequent based on the value v (pop the smallest/ min-heap)
                 heapq.heappop(heap)      
         res = []
-        while len(heap) > k:
+        while len(heap) > 0:
             res.append(heapq.heappop(heap)[1])
         return res
 
-print(Solution().topKelements([3, 3, 1, 1, 2, 2, 5, 7, 8], 3 ))
+print(Solution().topKelements([3, 3, 1, 1, 2, 5, 7, 8], 2 ))
     
