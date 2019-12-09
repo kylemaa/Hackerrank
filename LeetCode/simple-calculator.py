@@ -1,7 +1,8 @@
 class Solution:
     def eval(self, expression, index):
-        op = ''
-        result = 0
+        # op variable as empty string to hold operation state
+        op = '+'
+        result = 0 
         while index < len(expression):
             char = expression[index]
             if char in ('+', '-'):
@@ -10,13 +11,15 @@ class Solution:
                 value = 0
                 if char.isdigit():
                     value = int(char)
-                elif char == '(':
-                    (value, index) = self.eval(expression, index + 1)
+                elif char == '(':     
+                    (value, index) = self.eval(expression, index+1)
                 if op == '+':
-                    result += value
+                    result += value 
                 if op == '-':
                     result -= value 
-            index += 1
-        return (value, index)
+            index += 1 
 
-print(Solution().eval('(1 + (2 + (3 + (4 + 5))))', 0))
+        return(result, index) 
+
+
+print(Solution().eval('(1 + (2 + (3 + (4 + 5))))',0))
