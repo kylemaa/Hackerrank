@@ -4,7 +4,6 @@
 # dist = set()
 # for i in range(num)):
 #     dist.add(str(input())
-
 # print(len(dist))
 
 
