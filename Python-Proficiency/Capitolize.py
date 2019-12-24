@@ -1,8 +1,11 @@
+import os
+
+
 def solve(s):
-    s = input()
+
     for x in s[:].split():
         s = s.replace(x, x.capitalize())
-    print(s)
+    return(s)
 
 
 if __name__ == '__main__':
