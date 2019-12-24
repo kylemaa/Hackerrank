@@ -20,4 +20,4 @@ Speed & Efficiency| Code whichever said is possible.
 - [ ] LEETCODE
 
 ## Current Progress
-<img src="https://i.imgur.com/plOjGAX.png" width="280">
+<img src="https://i.imgur.com/Cm92gYY.png" width="280">
