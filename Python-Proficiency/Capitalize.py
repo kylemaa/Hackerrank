@@ -1,8 +1,9 @@
+# https://www.hackerrank.com/challenges/capitalize/problem
 import os
 
 
 def solve(s):
-
+    # x is the first character of s
     for x in s[:].split():
         s = s.replace(x, x.capitalize())
     return(s)
