@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/valid-parentheses/
 
+
 def validParantheses(s):
     stack = []
     for c in s:
@@ -22,7 +23,7 @@ def validParantheses(s):
                 return False
             else:
                 stack.pop()
-        
+
         if c == '{':
             stack.append('{')
         if c == '}':
@@ -32,9 +33,9 @@ def validParantheses(s):
                 return False
             else:
                 stack.pop()
-        
-        #egde case 
-    if len(stack)>0:
+
+        # egde case
+    if len(stack) > 0:
         return False
     else:
         return True

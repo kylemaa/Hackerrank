@@ -1,6 +1,7 @@
 import collections
 import heapq
 
+
 class Solution:
     def topKelements(self, nums, k):
         count = collections.defaultdict(int)
@@ -9,14 +10,14 @@ class Solution:
         heap = []
         for key, v in count.items():
             # heap push method
-            heapq.heappush(heap, (v,key))
+            heapq.heappush(heap, (v, key))
             if len(heap) > k:
                 # heap pop the ones that least frequent based on the value v (pop the smallest/ min-heap)
-                heapq.heappop(heap)      
+                heapq.heappop(heap)
         res = []
         while len(heap) > 0:
             res.append(heapq.heappop(heap)[1])
         return res
 
-print(Solution().topKelements([3, 3, 1, 1, 2, 5, 7, 8], 2 ))
-    
+
+print(Solution().topKelements([3, 3, 1, 1, 2, 5, 7, 8], 2))
