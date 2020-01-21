@@ -31,6 +31,6 @@ def remove_kth(node, k):
 head = Node(1, Node(2, Node(3, Node(4, Node(5, None)))))
 print(head)
 # 12345
-head = remove_kth(head, 4)
+head = remove_kth(head, 1)
 print(head)
 # 1234
