@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/container-with-most-water/
 class Solution:
-    def maxArea(self, height: List[int]) -> int:
+    def maxArea(self, height) -> int:
         # two pointers pointing at the end and beginning
         # of array height
         j = len(height) - 1
