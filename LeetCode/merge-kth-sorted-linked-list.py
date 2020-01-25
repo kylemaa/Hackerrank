@@ -30,6 +30,17 @@ def merge(lists):
     return head
 
 
+def merge2(lists):
+    head = current = Node(-1)
+    while any(list is not None for list in lists):
+        current_min, i = min((list.val, i)
+                             for i, list in enumerate(lists) if list is not None)
+    lists[i] = lists[i].next
+    current.next = Node(current_min)
+    current = current.next
+    return head.next
+
+
 a = Node(1, Node(3, Node(5)))
 b = Node(2, Node(4, Node(6)))
 
@@ -37,5 +48,5 @@ print(a)
 # 135
 print(b)
 # 246
-print(merge([a, b]))
+print(merge2([a, b]))
 # 123456
