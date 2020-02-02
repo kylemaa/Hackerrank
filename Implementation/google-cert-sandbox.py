@@ -1,13 +1,18 @@
-def is_power_of(number, base):
-    # Base case: when number is smaller than base.
-    if number < base:
-        # If number is equal to 1, it's a power (base**0).
-        return number == 1
+def pig_latin(text):
+    say = ""
+    # Separate the text into words
+    words = text.split(' ')
+    newwords = []
+    for word in words:
+        # Create the pig latin word and add it to the list
 
-    # Recursive case: keep dividing number by base.
-    return is_power_of(number/base, base)
+        # Turn the list back into a phrase
+        newwords.append(word[1:len(word)]+word[0]+"ay")
+    for i in newwords:
+        say += " "+i
+    return say
 
 
-print(is_power_of(8, 2))  # Should be True
-print(is_power_of(64, 4))  # Should be True
-print(is_power_of(70, 10))  # Should be False
+print(pig_latin("hello how are you"))  # Should be "ellohay owhay reaay ouyay"
+# Should be "rogrammingpay niay ythonpay siay unfay"
+print(pig_latin("programming in python is fun"))
