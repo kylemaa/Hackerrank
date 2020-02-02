@@ -1,6 +1,4 @@
 class Elevator:
-    """C1M5L2_Methods_and_Classes_V3 GOOGLE Python methods and classes example"""
-
     def __init__(self, bottom, top, current):
         """Initializes the Elevator instance."""
         self.top = 10
@@ -27,5 +25,9 @@ class Elevator:
             floor = self.bottom
         self.current = floor
 
+    def __str__(self):
+        return "Current floor: {}".format(self.current)
+
 
 elevator = Elevator(-1, 10, 0)
+print(elevator)
