@@ -1,17 +1,13 @@
-def print_prime_factors(number):
-    # Start with two, which is the first prime
-    factor = 2
-    # Keep going until the factor is larger than the number
-    while factor <= number:
-        # Check if factor is a divisor of number
-        if number % factor == 0:
-            # If it is, print it and divide the original number
-            print(factor)
-            number = number / factor
-        else:
-            # If it's not, increment the factor by one
-            factor += 1
-    return "Done"
+def is_power_of(number, base):
+    # Base case: when number is smaller than base.
+    if number < base:
+        # If number is equal to 1, it's a power (base**0).
+        return number == 1
+
+    # Recursive case: keep dividing number by base.
+    return is_power_of(number/base, base)
 
 
-print_prime_factors(100)  # Should print 2,2,5,5
+print(is_power_of(8, 2))  # Should be True
+print(is_power_of(64, 4))  # Should be True
+print(is_power_of(70, 10))  # Should be False
