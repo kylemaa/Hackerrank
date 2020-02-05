@@ -10,7 +10,7 @@ import sys
 def _upload():
 
     _upload_widget = fileupload.FileUploadWidget()
-
+    
     def _cb(change):
         global file_contents
         decoded = io.StringIO(change['owner'].data.decode('utf-8'))
