@@ -45,6 +45,7 @@ def extract_pid(log_line):
 # print(extract_pid(
 #     "July 31 08:08:08 mycomputer new_process[67890]: RUNNING Performing backup"))
 
+
 def convert_phone_number(phone):
     result = re.sub(r"(\d{3})(-\d{3})(-\b\d{4}\b)", r"(\1)\2\3", phone)
     return result
@@ -151,4 +152,38 @@ def main():
         output_file.close()
 
 
-main()
+# main()
+
+def show_time_of_pid(line):
+    pattern = r"(\w{3}) (\d \d+:\d+:\d+).*\[(\d+)\]"
+    result = re.search(pattern, line)
+    return "{} {} pid:{}".format(result[1], result[2], result[3])
+
+
+# # Jul 6 14:01:23 pid:29440
+# print(show_time_of_pid(
+#     "Jul 6 14:01:23 computer.name CRON[29440]: USER (good_user)"))
+
+# # Jul 6 14:02:08 pid:29187
+# print(show_time_of_pid(
+#     "Jul 6 14:02:08 computer.name jam_tag=psim[29187]: (UUID:006)"))
+
+# # Jul 6 14:02:09 pid:29187
+# print(show_time_of_pid(
+#     "Jul 6 14:02:09 computer.name jam_tag=psim[29187]: (UUID:007)"))
+
+# # Jul 6 14:03:01 pid:29440
+# print(show_time_of_pid(
+#     "Jul 6 14:03:01 computer.name CRON[29440]: USER (naughty_user)"))
+
+# # Jul 6 14:03:40 pid:29807
+# print(show_time_of_pid(
+#     "Jul 6 14:03:40 computer.name cacheclient[29807]: start syncing from \"0xDEADBEEF\""))
+
+# # Jul 6 14:04:01 pid:29440
+# print(show_time_of_pid(
+#     "Jul 6 14:04:01 computer.name CRON[29440]: USER (naughty_user)"))
+
+# # Jul 6 14:05:01 pid:29440
+# print(show_time_of_pid(
+#     "Jul 6 14:05:01 computer.name CRON[29440]: USER (naughty_user)"))
