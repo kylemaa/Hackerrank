@@ -1,0 +1,19 @@
+July 31 00:06:21 mycomputername kernel[96041]: WARN Failed to start network con$
+July 31 00:09:53 mycomputername updater[46711]: WARN Computer needs to be turne$
+July 31 00:12:36 mycomputername kernel[48462]: INFO Successfully connected
+July 31 00:13:52 mycomputername updater[43530]: ERROR Error running Python2.exe$
+July 31 00:16:13 mycomputername NetworkManager[63902]: WARN Failed to start app$
+July 31 00:26:45 mycomputername CRON[83063]: INFO I'm sorry Dave. I'm afraid I $
+July 31 00:27:56 mycomputername cacheclient[75746]: WARN PC Load Letter
+July 31 00:33:31 mycomputername system[25588]: ERROR Out of yellow ink, specifi$
+July 31 00:36:55 mycomputername updater[73786]: WARN Packet loss
+July 31 00:37:38 mycomputername dhcpclient[87602]: INFO Googling the answer
+July 31 00:37:48 mycomputername utility[21449]: ERROR The cake is a lie!
+July 31 00:44:50 mycomputername kernel[63793]: ERROR Failed process [13966]
+July 31 00:45:23 mycomputername cacheclient[55644]: ERROR Unable to download mo$
+July 31 00:51:23 mycomputername cacheclient[85917]: ERROR Failed process [13966]
+July 31 01:06:51 mycomputername cacheclient[47853]: WARN Computer needs to be t$
+July 31 01:07:17 mycomputername system[78132]: INFO Packets sent successfully
+July 31 01:19:34 mycomputername CRON[94028]: WARN Failed to start network conne$
+July 31 01:24:05 mycomputername utility[14905]: INFO Healthy resource usage
+July 31 01:29:04 mycomputername kernel[57436]: INFO Generating Logs
