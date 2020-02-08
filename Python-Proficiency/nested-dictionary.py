@@ -7,7 +7,7 @@ normal_dictionary = {'error_name1': 30, 'error_name2': 44, 'error_name3': 0}
 
 
 def generate_user_report(dictionary, report_file):
-    with open(report_file, "w") as f:
+    with open(report_file, "w+") as f:
         f.write("Username"+', '+"INFO"+', '+"ERROR" + '\n')
         for k in sorted(dictionary.items(), key=operator.itemgetter(0)):
             f.write(

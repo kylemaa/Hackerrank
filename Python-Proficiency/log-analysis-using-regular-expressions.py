@@ -45,7 +45,7 @@ def generate_error_report(dictionary, report_file):
 
 # Generate report function to sort and write user stats into a csv report file
 def generate_user_report(dictionary, report_file):
-    with open(report_file, "w") as f:
+    with open(report_file, "w+") as f:
         f.write("NAME"+', '+"INFO"+', '+"ERROR" + '\n')
         for k in sorted(dictionary.items(), key=operator.itemgetter(0)):
             f.write(
@@ -67,3 +67,16 @@ if __name__ == "__main__":
     generate_error_report(error, '$HOME/error_message.csv')
     generate_user_report(error, '$HOME/user_statistics.csv')
     sys.exit(0)
+
+'''
+# Save this file, then run the file by passing the path to syslog.log as a parameter to the script.
+
+    sudo chmod +x log-analysis-regular-experessions.py
+    ./log-analysis-regular-experessions.py ~/data/syslog.log'
+
+# To convert the error_message.csv into HTML file run the following command:
+
+    ./csv_to_html.py error_message.csv /var/www/html/<any-html-filename>.html
+
+# Access html file at: [linux-instance-external-IP]/[html-filename].html
+'''

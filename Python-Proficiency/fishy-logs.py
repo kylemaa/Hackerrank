@@ -57,4 +57,10 @@ Define the main function and call both functions that we defined in the earlier 
 
 The variable log_file takes in the path to the log file passed as a parameter. In our case, the file is fishy.log. Call the first function i.e., error_search() and pass the variable log_file to the function. This function will search and return a list of errors that would be stored in the variable returned_errors. Call the second function file_output and pass the variable returned_errors as a parameter.
 
-sys.exit(0) is used to exit from Python, the optional argument passed can be an integer giving the exit status (defaulting to zero), or another type of object. If it is an integer, zero is considered "successful termination" and any nonzero value is considered an "abnormal termination" by shells."""
+sys.exit(0) is used to exit from Python, the optional argument passed can be an integer giving the exit status (defaulting to zero), or another type of object. If it is an integer, zero is considered "successful termination" and any nonzero value is considered an "abnormal termination" by shells.
+This script will now prompt for the type of error to be searched. Continue by entering the following type of error:
+
+CRON ERROR Failed to start
+
+On successful execution, this will generate an errors_found.log file, where you will find all the ERROR logs based on your search. You can view the ERROR log using the command below:
+"""
