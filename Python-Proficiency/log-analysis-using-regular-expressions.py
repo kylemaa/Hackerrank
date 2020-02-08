@@ -10,7 +10,7 @@ def search_pattern(pattern, line):
     return result
 
 
-# Open the syslog.log file. Use for loops to count each occurence of each regex pattern above
+# Parse the syslog.log file into two different dictionarys. Use for loops to count each occurence of each regex pattern above
 def parse_log(syslog):
     with open(syslog, 'r') as syslog:
         for line in syslog.readlines():
@@ -45,9 +45,11 @@ def generate_error_report(dictionary, report_file):
 
 # Generate report function to sort and write user stats into a csv report file
 def generate_user_report(dictionary, report_file):
-    with open(report_file, "w+") as f:
-        for k in sorted(per_user.items(), key=operator.itemgetter(0)):
-            f.write(str(k)+':'+str(dictionary[k]) + '\n')
+    with open(report_file, "w") as f:
+        f.write("NAME"+', '+"INFO"+', '+"ERROR" + '\n')
+        for k in sorted(dictionary.items(), key=operator.itemgetter(0)):
+            f.write(
+                str(k[0])+', '+str(k[1]['INFO'])+', '+str(k[1]['ERROR']) + '\n')
         f.close()
 
 
