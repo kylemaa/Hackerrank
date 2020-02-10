@@ -16,7 +16,7 @@ def generate_user_report(dictionary, report_file):
 
 
 def generate_error_report(dictionary, report_file):
-    with open(report_file, "w") as f:
+    with open(report_file, "w+") as f:
         f.write("Error"+', ' + "Count" + '\n')
         for k in sorted(dictionary.items(), key=operator.itemgetter(1), reverse=True):
             f.write(str(k[0])+', '+str(k[1])+'\n')
@@ -27,4 +27,4 @@ generate_user_report(
     nested_dictionary, '/Users/KKyle/Hackerrank/Python-Proficiency/nested_dictionary.csv')
 
 generate_error_report(
-    normal_dictionary, '/Users/KKyle/Hackerrank/Python-Proficiency/nested_dictionary.csv')
+    normal_dictionary, '/Users/KKyle/Hackerrank/Python-Proficiency/nested_error_dictionary.csv')
