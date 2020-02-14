@@ -2,6 +2,7 @@
 import csv
 import datetime
 import requests
+import operator
 
 FILE_URL = "http://marga.com.ar/employees-with-date.csv"
 
@@ -43,25 +44,15 @@ def get_same_or_newer(start_date, data):
     # the given start date.
     min_date = datetime.datetime.today()
     min_date_employees = []
-    for row in reader:
+    for row in sorted(reader, key=operator.itemgetter(3)):
         row_date = datetime.datetime.strptime(row[3], '%Y-%m-%d')
-        # If this date is smaller than the one we're looking for,
-        # we skip this row
-        if row_date < start_date:
-            continue
-
-        # If this date is smaller than the current minimum,
-        # we pick it as the new minimum, resetting the list of
-        # employees at the minimal date.
-        if row_date < min_date:
-            min_date = row_date
-            min_date_employees = []
-
-        # If this date is the same as the current minimum,
-        # we add the employee in this row to the list of
-        # employees at the minimal date.
-        if row_date == min_date:
-            min_date_employees.append("{} {}".format(row[0], row[1]))
+        # Get the other half of the sorted array if row date is equal or greater than start date
+        if row_date >= start_date:
+            if row_date < min_date:
+                min_date = row_date
+                min_date_employees = []
+            if row_date == min_date:
+                min_date_employees.append("{} {}".format(row[0], row[1]))
     return min_date, min_date_employees
 
 
