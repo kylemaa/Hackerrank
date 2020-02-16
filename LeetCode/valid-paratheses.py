@@ -2,44 +2,54 @@
 
 
 def validParantheses(s):
+    """This function returns True if a string contain valid parentheses else returns False"""
+
     stack = []
-    for c in s:
-        if c == '(':
+    for character in s:
+        # Push the open bracket into the stack
+        if character == '(':
             stack.append('(')
-        if c == ')':
+        if character == ')':
+            # If close bracket starts first then it is not valid
             if len(stack) == 0:
                 return False
+            # If there is no matching bracket then it is not valid
             if stack[-1] != '(':
                 return False
-            else:
-                stack.pop()
+            # If there is a matching bracket then pop the open bracket
+            stack.pop()
 
-        if c == '[':
-            stack.append('[')
-        if c == ']':
-            if len(stack) == 0:
-                return False
-            if stack[-1] != '[':
-                return False
-            else:
-                stack.pop()
-
-        if c == '{':
+        # Push the open bracket into the stack
+        if character == '{':
             stack.append('{')
-        if c == '}':
+        if character == '}':
+            # If close bracket starts first then it is not valid
             if len(stack) == 0:
                 return False
+            # If there is no matching bracket then it is not valid
             if stack[-1] != '{':
                 return False
-            else:
-                stack.pop()
+            # If there is a matching bracket then pop the open bracket
+            stack.pop()
 
-        # egde case
-    if len(stack) > 0:
-        return False
-    else:
+        # Push the open bracket into the stack
+        if character == '[':
+            stack.append('[')
+        if character == ']':
+            # If close bracket starts first then it is not valid
+            if len(stack) == 0:
+                return False
+            # If there is no matching bracket then it is not valid
+            if stack[-1] != '[':
+                return False
+            # If there is a matching bracket then pop the open bracket
+            stack.pop()
+
+    # After iterating through the string checks if the stack is empty
+    if len(stack) == 0:
         return True
+    return False
 
 
-s = '()[]'
+s = '[]{{}}()'
 print(validParantheses(s))
