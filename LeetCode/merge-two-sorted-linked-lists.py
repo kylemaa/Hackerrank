@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/merge-two-sorted-lists/
-# Definition for singly-linked list.
+
+"""This script merges two linked list into one sorted linked list"""
 
 
 class ListNode:
@@ -7,30 +8,41 @@ class ListNode:
         self.val = x
         self.next = None
 
+    def __str__(self):
+        c = self
+        answer = ''
+        while c:
+            answer += str(c.val) if c.val else ""
+            c = c.next
+        return answer
+
 
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        if not l1:
-            return l2
-        if not l2:
-            return l1
+        lists = [l1, l2]
+        array = []
+        for node in lists:
+            while node:
+                array.append(node.val)
+                node = node.next
 
-        dummyNode = ListNode(0)
-        pre = dummyNode
-
-        while l1 and l2:
-            if l1.val <= l2.val:
-                pre.next = l1
-                l1 = l1.next
+        head = root = None
+        for val in sorted(array):
+            # head and root are going to point at the first node.
+            if not root:
+                head = root = ListNode(val)
+            # if root is already pointed to a node, then assign val to root's nexts
             else:
-                pre.next = l2
-                l2 = l2.next
-            pre = pre.next
-        # if still remaining in either l1 or l2
-        if not l1:
-            pre.next = l2
-        elif not l2:
-            pre.next = l1
-        # pre.next = l1 or l2
+                root.next = ListNode(val)
+                root = root.next
+        # return the head which has the print string method of all of its node
+        return head
 
-        return dummyNode.next
+
+a = ListNode(1)
+a.next = ListNode(2)
+a.next.next = ListNode(3)
+b = ListNode(1)
+b.next = ListNode(3)
+b.next.next = ListNode(5)
+print(Solution().mergeTwoLists(a, b))  # Should output 112233
