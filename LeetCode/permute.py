@@ -3,10 +3,10 @@
 
 class Solution:
     def permute(self, nums):
-        # returning all possible sets by appending them to res
         res = []
 
         def permuteHelper(start, end):
+            # Whenever the start reaches the end of the array, append a copy of the array
             if start == end:
                 res.append(nums.copy())
             for i in range(start, len(nums)):
