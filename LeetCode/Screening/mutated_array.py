@@ -1,3 +1,6 @@
+"""This function returns a mutated array given the formula a[i-1]+a[i]+a[i+1]"""
+
+
 def mutateTheArray(n, a):
     b = []
     i = 0

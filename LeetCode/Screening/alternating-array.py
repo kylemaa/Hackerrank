@@ -1,3 +1,6 @@
+"""This function alternates the array from both ends and then check if altered array is ascending"""
+
+
 def alternatingSort(a):
     n = len(a)
     b = []
