@@ -1,3 +1,6 @@
+"""This function concates the integer in an array and its duplicate then return the sum"""
+
+
 def concatenationsSum(a):
     s = ''
     b = []
