@@ -183,7 +183,3 @@ def show_time_of_pid(line):
 # # Jul 6 14:04:01 pid:29440
 # print(show_time_of_pid(
 #     "Jul 6 14:04:01 computer.name CRON[29440]: USER (naughty_user)"))
-
-# # Jul 6 14:05:01 pid:29440
-# print(show_time_of_pid(
-#     "Jul 6 14:05:01 computer.name CRON[29440]: USER (naughty_user)"))
