@@ -83,7 +83,7 @@ def main(argv):
     report('/tmp/cars.pdf', "Cars report",
            new_summary, cars_dict_to_table(data))
     # TODO: send the PDF report as an email attachment
-    msg = email_generate("automation@example.com", "student-03-fc0c247f4859@example.com",
+    msg = email_generate("automation@example.com", "student-00-7fafb0a9a995@example.com",
                          "Sales summary for last month", new_summary, "/tmp/cars.pdf")
     email_send(msg)
 
